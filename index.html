@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hey, im Allal, your AI virtual assistant, dont hesitate to ask me anything, im available all day, all night, all days of the week!">
+    <title>AllalBot</title>
+</head>
+<body>
+
+<header>
+    <h1>Allal</h1>
+    <img src="avatar.png" alt="avatar de bot" width="80">
+</header>
+
+<main>
+    <!-- Presentation -->
+    <section>
+        <h2>Presentation:</h2>
+        <p>Bonjour! Je suis Allal, un chatbot de Ain Aouda, expert dans la bibliotheque.</p>
+    </section>
+
+    <!-- Capacites -->
+    <section>
+        <h2>Ce que je peux faire</h2>
+        <ul>
+            <li>Repondre aux questions a propos de la bibliotheque</li>
+            <li>Repondre a vos questions concernant des livres</li>
+            <li>Vous donner la localisation precise des livres dans la bibliotheque</li>
+            <li>Vous aider a creer une carte d'abonnement a la bibliotheque</li>
+        </ul>
+    </section>
+
+    <!-- Exemple Conversation -->
+    <section>
+        <h2>Exemple Conversation</h2>
+
+        <p><strong>You:</strong> Bonjour</p>
+        <p><strong>Allal:</strong> Bonjour! Je suis Allal, votre assistant virtuel!</p>
+        <p><strong>You:</strong> J'ai une question a propos du livre Metamorphosis by Franz Kafka</p>
+        <p><strong>Allal:</strong> Oui, posez votre question.</p>
+        <p><strong>You:</strong> Est-ce que ce livre est disponible? Si oui, ou le trouver?</p>
+        <p><strong>Allal:</strong> Oui, bien sur, etage 1, section "novels", categorie "Modernist literature".</p>
+
+        <hr>
+
+        <form>
+            <label for="message">Votre message</label>
+            <input type="text" id="message" name="message"
+                   placeholder="ecrivez votre message..."
+                   maxlength="300" required>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+</main>
+
+<aside>
+    <table border="1">
+        <caption>FAQ</caption>
+        <thead>
+            <tr>
+                <th>Questions frequentes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ou je peux trouver ce livre?</td>
+            </tr>
+            <tr>
+                <td>Comment je m'inscris dans cette bibliotheque?</td>
+            </tr>
+            <tr>
+                <td>De quoi parle ce livre?</td>
+            </tr>
+            <tr>
+                <td>Quel est le prix d'inscription?</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Formulaire Avis -->
+    <form>
+        <fieldset>
+            <legend>Votre avis</legend>
+
+            <p>Note :</p>
+
+            <input type="radio" id="note1" name="note" value="1" required>
+            <label for="note1">1</label>
+
+            <input type="radio" id="note2" name="note" value="2">
+            <label for="note2">2</label>
+
+            <input type="radio" id="note3" name="note" value="3">
+            <label for="note3">3</label>
+
+            <input type="radio" id="note4" name="note" value="4">
+            <label for="note4">4</label>
+
+            <input type="radio" id="note5" name="note" value="5">
+            <label for="note5">5</label>
+
+            <br><br>
+
+            <label for="commentaire">Commentaire :</label>
+            <br>
+            <textarea id="commentaire" name="commentaire"
+                      rows="3" maxlength="200"></textarea>
+
+            <br><br>
+
+            <button type="submit">Envoyer mon avis</button>
+        </fieldset>
+    </form>
+</aside>
+
+<footer>
+    <!-- Disponibilite -->
+    <h2>Disponibilite</h2>
+    <p>Assistant disponible 24h/24</p>
+</footer>
+
+</body>
+</html>
