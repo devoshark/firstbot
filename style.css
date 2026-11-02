@@ -53,3 +53,64 @@ button:hover {
     background-color: blue;
     color: white;
 }
+
+.statut{
+    display: flex;
+    flex-direction: column;
+    color: green;
+}
+.avatar{
+    display: flex;
+    flex-shrink: 0;
+}
+.parent{
+    display: flex;
+    flex-direction: column;
+}
+
+.mess{
+    display: flex;
+    gap: 0.75rem;
+    flex-direction: column;
+    /* margin-left: auto; */
+    width: fit-content;
+
+}
+.mess.bot {
+    align-self: flex-start;
+}
+
+.mess.user {
+    align-self: flex-end;
+}
+
+.messagebubble {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.inputb {
+    flex: 1;
+}
+
+.unordered{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+
+}
+
+.unordered li{
+    background-color: lightblue;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+.radiohead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

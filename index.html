@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +14,9 @@
 <body>
 
 <header>
-    <h1>Allal</h1>
+    <div><h1>Allal</h1>
+    <p class="statut">Online</p></div>
+    
     <img class="avatar" src="images/avatar.png" alt="avatar de bot" width="80">
 </header>
 
@@ -29,7 +30,7 @@
     <!-- Capacites -->
     <section>
         <h2>Ce que je peux faire</h2>
-        <ul>
+        <ul class="unordered">
             <li>Repondre aux questions a propos de la bibliotheque</li>
             <li>Repondre a vos questions concernant des livres</li>
             <li>Vous donner la localisation precise des livres dans la bibliotheque</li>
@@ -38,7 +39,7 @@
     </section>
 
     <!-- Exemple Conversation -->
-    <section>
+    <section class="parent">
         <h2>Exemple Conversation</h2>
 
         <p class="mess user">Bonjour</p>
@@ -50,12 +51,12 @@
 
         <hr>
 
-        <form>
-            <label for="message">Votre message</label>
+        <form class="messagebubble">
+            <label for="message" class="labelb">Votre message :</label>
             <input type="text" id="message" name="message"
-                   placeholder="ecrivez votre message..."
-                   maxlength="300" required>
-            <button type="submit">Envoyer</button>
+                   placeholder="Ecrivez votre message..."
+                   maxlength="300" required class="inputb">
+            <button type="submit" class="buttonb">Envoyer</button>
         </form>
     </section>
 </main>
@@ -86,7 +87,7 @@
 
     <!-- Formulaire Avis -->
     <form>
-        <fieldset>
+        <fieldset class="radiohead">
             <legend>Votre avis</legend>
 
             <p>Note :</p>
