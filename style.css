@@ -1,7 +1,67 @@
+/* ===== Ajouts TP7 : Grid + responsive ===== */
+
+/* Les images ne dépassent jamais de leur zone */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Mobile d'abord : une seule colonne, l'historique est masqué */
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "conversation"
+        "aside"
+        "footer";
+    gap: 1rem;
+    margin: 0;
+}
+
+header  { grid-area: header; }
+.historique { grid-area: historique; display: none; }
+main    { grid-area: conversation; }
+aside   { grid-area: aside; }
+footer  { grid-area: footer; }
+
+/* min-width: 0 empêche le contenu de faire déborder les colonnes */
+main, aside, .historique { min-width: 0; }
+
+aside table { max-width: 100%; }
+aside textarea { max-width: 100%; box-sizing: border-box; }
+.historique ul { padding-left: 1rem; }
+
+/* À partir de 768px : conversation (2fr) et aside (1fr) côte à côte */
+@media (min-width: 768px) {
+    body {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            "header header"
+            "conversation aside"
+            "footer footer";
+    }
+}
+
+/* À partir de 1024px : historique (200px) | conversation | aside (280px) */
+@media (min-width: 1024px) {
+    body {
+        grid-template-columns: 200px 1fr 280px;
+        grid-template-areas:
+            "header header header"
+            "historique conversation aside"
+            "footer footer footer";
+    }
+    .historique { display: block; }
+}
+
+/* ===== Ton CSS d'origine ===== */
+
+/* main n'a plus besoin de width/margin : la grille gère sa largeur */
 main {
-    width: 90%;
-    max-width: 800px;
-    margin: 0 auto;
+    width: auto;
+    max-width: none;
+    margin: 0;
 }
 
 .mess{
@@ -74,7 +134,8 @@ button:hover {
     flex-direction: column;
     /* margin-left: auto; */
     width: fit-content;
-
+    max-width: 100%;
+    overflow-wrap: anywhere;
 }
 .mess.bot {
     align-self: flex-start;
@@ -92,6 +153,7 @@ button:hover {
 
 .inputb {
     flex: 1;
+    min-width: 0;
 }
 
 .unordered{
@@ -111,6 +173,7 @@ button:hover {
 
 .radiohead{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
